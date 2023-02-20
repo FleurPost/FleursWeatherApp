@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Weather app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container text-center">
+      <div class="weather-app">
+        <header>Weather Radar</header>
+        <br />
+        <form id="search-form">
+          <div class="input-group mb-3">
+            <input
+            id="insert-city"  
+            type="text"
+            class="form-control"
+            placeholder="Insert City.."
+            autofocus = on
+            />
+            <input
+            id = searchCity
+            type = "submit" 
+            value =  🔍
+            class="btn btn-outline-secondary"
+            />
+            <input
+            id = button
+            type = "button" 
+            value =  Local
+            class="btn btn-outline-secondary"
+            />
+          </div>
+        </form>
+        <ul>
+          <li id="city"></li>
+          <li id="today"></li>
+          <li id="weather-description"></li>
+        </ul>
+        <br />
+        <div class="row" id="main-temperature">
+          <div class="col-6">
+            <img
+              src="images/brightness-high.svg"
+              class="card-img-top"
+              alt="sunny icon"
+            />
+          </div>
+          <div class="col-6">
+            <div class="col-6">
+              <ul class="rain-sun-percentage" id="rain-sun-percentage">
+                <li><span class="temperature-today" id="temperature-today"></span>°C</li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Windspeed: <span id="wind"></span>km/h</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+        <br />
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 4rem">
+              <div class="card-body">
+                <h5 class="card-title">Mon</h5>
+                <p class="card-text">4 aug</p>
+                <img
+                  src="images/brightness-high.svg"
+                  class="card-img-top"
+                  alt="sun"
+                />
+                <p class="card-text">25°</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 4rem">
+              <div class="card-body">
+                <h5 class="card-title">Tue</h5>
+                <p class="card-text">5 aug</p>
+                <img
+                  src="images/brightness-high.svg"
+                  class="card-img-top"
+                  alt="sun"
+                />
+                <p class="card-text">25°</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 4rem">
+              <div class="card-body">
+                <h5 class="card-title">Wed</h5>
+                <p class="card-text">6 aug</p>
+                <img
+                  src="images/brightness-high.svg"
+                  class="card-img-top"
+                  alt="sun"
+                />
+                <p class="card-text">25°</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 4rem">
+              <div class="card-body">
+                <h5 class="card-title">Thu</h5>
+                <p class="card-text">7 aug</p>
+                <img
+                  src="images/brightness-high.svg"
+                  class="card-img-top"
+                  alt="sun"
+                />
+                <p class="card-text">25°</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 4rem">
+              <div class="card-body">
+                <h5 class="card-title">Fri</h5>
+                <p class="card-text">8 aug</p>
+                <img
+                  src="images/brightness-high.svg"
+                  class="card-img-top"
+                  alt="sun"
+                />
+                <p class="card-text">25°</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 4rem">
+              <div class="card-body">
+                <h5 class="card-title">Sat</h5>
+                <p class="card-text">7 aug</p>
+                <img
+                  src="images/brightness-high.svg"
+                  class="card-img-top"
+                  alt="sun"
+                />
+                <p class="card-text">25°</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

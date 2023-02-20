@@ -1,0 +1,69 @@
+
+body {
+    margin: 0 auto;
+    padding: 200px;
+}
+
+header {
+    text-align: center;
+    font-size: 30px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+h5 {
+    font-size: smaller;
+}
+
+ul {
+    text-align: left;
+}
+
+li {
+    list-style: none;
+}
+
+.input-group {
+margin: 50 0 50 0 auto;
+padding: 50px;
+}
+
+.card {
+    margin: 0 auto;
+}
+
+.weather-app {
+    border: 1px solid grey;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 7%;
+}
+
+.btn-outline-secondary {
+    color: green;
+}
+
+.degrees-today {
+    font-size: 60px;
+}
+
+.temperature-today {
+    text-align: left;
+    font-size: 35px;
+}
+
+.rain-sun-percentage {
+    text-align: left;
+}
+
+
+
