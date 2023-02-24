@@ -39,10 +39,10 @@ currentdate.innerHTML = formatDate(data);
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature-today").innerHTML = Math.round(response.data.temperature.current);
-  document.querySelector("#weather-description").innerHTML = response.data.weather[0].description;
+  document.querySelector("#weather-description").innerHTML = response.data.condition.description;
   document.querySelector("#humidity").innerHTML = response.data.temperature.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
-  document.querySelector("#weather-icon").innerHTML = response.data.condition.icon_url;
+  document.querySelector("#weather-icon").innerHTML = response.data.condition.icon;
 
 }
 
