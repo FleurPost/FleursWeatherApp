@@ -37,7 +37,7 @@ let data = new Date();
 currentdate.innerHTML = formatDate(data);
 
 function displayWeatherCondition(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature-today").innerHTML = Math.round(response.temperature.day);
   document.querySelector("#weather-description").innerHTML = response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
