@@ -50,7 +50,7 @@ function handleSubmit(event) {
   event.preventDefault();
   let apiKey = "e4fc849f9b230t53ac4fc6ffacf0bo9b";
   let city = document.querySelector("#insert-city").value;
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -62,7 +62,7 @@ function myPosition(position) {
   let longitude = position.coords.longitude;
   let apiKey = "e4fc849f9b230t53ac4fc6ffacf0bo9b";
   let units = "metric";
-  let apiEndpoint = `https://api.shecodes.io/weather/v1/forecast`;
+  let apiEndpoint = `https://api.shecodes.io/weather/v1/current`;
   let apiUrl = `${apiEndpoint}?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(displayWeatherCondition);
