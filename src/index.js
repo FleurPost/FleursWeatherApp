@@ -46,9 +46,9 @@ function displayWeatherCondition(response) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let apiKey = "8944afa6845bd7c413a687258d3211ef";
+  let apiKey = "e4fc849f9b230t53ac4fc6ffacf0bo9b";
   let city = document.querySelector("#insert-city").value;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -58,11 +58,10 @@ form.addEventListener("submit", handleSubmit);
 function myPosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-  let apiKey = "8944afa6845bd7c413a687258d3211ef";
+  let apiKey = "e4fc849f9b230t53ac4fc6ffacf0bo9b";
   let units = "metric";
-  let name = "Voorbeeld";
-  let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather`;
-  let apiUrl = `${apiEndpoint}?lat=${latitude}&lon=${longitude}&name=${name}&appid=${apiKey}&units=${units}`;
+  let apiEndpoint = `https://api.shecodes.io/weather/v1/forecast`;
+  let apiUrl = `${apiEndpoint}?lon=${longitude}&lat=${latitude}&key=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(displayWeatherCondition);
 }
