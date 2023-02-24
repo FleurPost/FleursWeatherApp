@@ -42,7 +42,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#weather-description").innerHTML = response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.temperature.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
-  //document.querySelector("#weather-icon").innerHTML = response.condition.icon_url;
+  document.querySelector("#weather-icon").innerHTML = response.data.condition.icon_url;
 
 }
 
