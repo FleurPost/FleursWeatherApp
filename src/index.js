@@ -37,8 +37,8 @@ let data = new Date();
 currentdate.innerHTML = formatDate(data);
 
 function displayWeatherCondition(response) {
-  document.querySelector("#city").innerHTML = response.data.city;
-  document.querySelector("#temperature-today").innerHTML = Math.round(response.data.temperature.current);
+  document.querySelector("#city").innerHTML = response.city;
+  document.querySelector("#temperature-today").innerHTML = Math.round(response.temperature.current);
   document.querySelector("#weather-description").innerHTML = response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.temperature.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
