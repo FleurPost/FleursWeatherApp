@@ -49,7 +49,8 @@ padding: 50px;
     padding: 20px;
     margin: 20px auto;
     max-width: 600px;
-    border-radius: 7%;
+    background-color: pink;
+    color:darkolivegreen;
 }
 
 .btn-outline-secondary {
@@ -69,5 +70,11 @@ padding: 50px;
     text-align: left;
 }
 
+.city {
+    font-size:larger;
+}
 
+.github-link {
+    font-size: smaller;
+}
 

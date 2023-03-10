@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
-    <div class="container text-center">
+    <div class="container">
       <div class="weather-app">
         <header>Weather Radar</header>
         <br />
@@ -43,7 +43,7 @@
           </div>
         </form>
         <ul>
-          <li id="city"></li>
+          <li class=city id="city"></li>
           <li id="today"></li>
           <li id="weather-description"></li>
         </ul>
@@ -51,20 +51,19 @@
         <div class="row" id="main-temperature">
           <div class="col-6">
             <img
-              src="images/brightness-high.svg"
+              src=""
               class="card-img-top"
               alt="sunny icon"
               id="weather-icon"
+              width="100"
             />
           </div>
           <div class="col-6">
-            <div class="col-6">
               <ul class="rain-sun-percentage" id="rain-sun-percentage">
-                <li><span class="temperature-today" id="temperature-today"></span>°C</li>
+                <li><span class="temperature-today" id="temperature-today"></span><span class="units">°C | <a href="#" id="fahrenheit-link">°F</a></span></li>
               <li>Humidity: <span id="humidity"></span>%</li>
               <li>Windspeed: <span id="wind"></span>km/h</li>
             </ul>
-          </div>
           </div>
         </div>
         <br />
@@ -156,7 +155,7 @@
         </div>
       </div>
     </div>
-    <a href="https://github.com/FleurPost">GitHub Fleur</a>
+    <a class=github-link href="https://github.com/FleurPost">GitHub Fleur</a>
     <script src="src/index.js"></script>
   </body>
 </html>

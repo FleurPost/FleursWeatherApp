@@ -42,7 +42,10 @@ function displayWeatherCondition(response) {
   document.querySelector("#weather-description").innerHTML = response.data.condition.description;
   document.querySelector("#humidity").innerHTML = response.data.temperature.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
-  document.querySelector("#weather-icon").innerHTML = response.data.condition.icon;
+  let weatherIcon = document.querySelector('#weather-icon');
+  weatherIcon.setAttribute("src",response.data.condition.icon_url);
+
+
 
 }
 
@@ -53,9 +56,6 @@ function handleSubmit(event) {
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handleSubmit); 
 
 function myPosition(position) {
   let latitude = position.coords.latitude;
@@ -72,5 +72,21 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(myPosition);
 }
 
+//function displayFahrenheitTemperature(event) {
+ // event.preventDefault();
+ // let temperatureElement = document.querySelector("#temperature-today");
+ // let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
+ // temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+//}
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit); 
+
 let localButton = document.querySelector("#button");
 localButton.addEventListener("click", getCurrentPosition);
+
+//let fahrenheitLink = document.querySelector("#fahrenheit-link");
+//fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+//let celciusTemperature = null;
+
