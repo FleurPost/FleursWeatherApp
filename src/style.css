@@ -40,10 +40,6 @@ margin: 50 0 50 0 auto;
 padding: 50px;
 }
 
-.card {
-    margin: 0 auto;
-}
-
 .weather-app {
     border: 1px solid grey;
     padding: 20px;
@@ -75,7 +71,17 @@ padding: 50px;
     font-size:larger;
 }
 
+.weather-forecast-temperatures {
+font-size: 14px;
+
+}
+
+.weather-forecast-min-temp {
+    opacity: 0.5;
+}
+
 .github-link {
     font-size: smaller;
+    text-align: center;
 }
 

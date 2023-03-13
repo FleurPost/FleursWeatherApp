@@ -34,6 +34,7 @@ function formatDate(data) {
 let currentdate = document.querySelector("#today");
 let data = new Date();
 
+
 currentdate.innerHTML = formatDate(data);
 
 function displayWeatherCondition(response) {
@@ -44,8 +45,6 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
   let weatherIcon = document.querySelector('#weather-icon');
   weatherIcon.setAttribute("src",response.data.condition.icon_url);
-
-
 
 }
 
@@ -73,11 +72,12 @@ function getCurrentPosition() {
 }
 
 //function displayFahrenheitTemperature(event) {
- // event.preventDefault();
- // let temperatureElement = document.querySelector("#temperature-today");
- // let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
- // temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+ //event.preventDefault();
+ //let temperatureElement = document.querySelector("#temperature-today");
+ //let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
+ //temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 //}
+
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit); 
@@ -89,4 +89,8 @@ localButton.addEventListener("click", getCurrentPosition);
 //fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 //let celciusTemperature = null;
+
+//handleSubmit("Amsterdam");
+
+
 
