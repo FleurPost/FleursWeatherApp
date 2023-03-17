@@ -126,6 +126,6 @@ localButton.addEventListener("click", getCurrentPosition);
 
 displayForecast();
 
-handleSubmit("Amsterdam");
+//handleSubmit("Amsterdam"); -- can not get this to work 
 
 
