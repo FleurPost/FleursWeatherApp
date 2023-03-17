@@ -31,11 +31,39 @@ function formatDate(data) {
   return `${day}, ${date} ${month}, ${hour}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat","Sun"];
+days.forEach(function (day) {
+forecastHTML = forecastHTML + `
+<div class="col-2">
+      <div class="weather-forecast-date">${day}</div>
+      <img
+        src="images/brightness-high.svg"
+        alt=""
+        width="25"
+      />
+      <div class="weather-forecast-temperatures"><span class="weather-forecast-max-temp">25°</span>
+      <span class="weather-forecast-min-temp">15°</span></div>
+  </div>
+`;});
+
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+}
+
 let currentdate = document.querySelector("#today");
 let data = new Date();
 
 
 currentdate.innerHTML = formatDate(data);
+
+function getForecast(coordinates) {
+console.log(coordinates);
+
+}
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.city;
@@ -46,6 +74,7 @@ function displayWeatherCondition(response) {
   let weatherIcon = document.querySelector('#weather-icon');
   weatherIcon.setAttribute("src",response.data.condition.icon_url);
 
+  console.log(response.data.coordinates);
 }
 
 function handleSubmit(event) {
@@ -79,6 +108,7 @@ function getCurrentPosition() {
 //}
 
 
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit); 
 
@@ -92,5 +122,5 @@ localButton.addEventListener("click", getCurrentPosition);
 
 //handleSubmit("Amsterdam");
 
-
+displayForecast();
 
