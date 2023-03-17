@@ -118,13 +118,6 @@ function getCurrentPosition() {
   navigator.geolocation.getCurrentPosition(myPosition);
 }
 
-//function displayFahrenheitTemperature(event) {
- //event.preventDefault();
- //let temperatureElement = document.querySelector("#temperature-today");
- //let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
- //temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-//}
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit); 
 
@@ -133,20 +126,6 @@ localButton.addEventListener("click", getCurrentPosition);
 
 displayForecast();
 
-
-
-//function displayFahrenheitTemperature(event) {
- //event.preventDefault();
- //let temperatureElement = document.querySelector("#temperature-today");
- //let fahrenheitTemperature = (temperatureElement.innerHTML * 9) / 5 + 32;
- //temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-//}
-
-//let fahrenheitLink = document.querySelector("#fahrenheit-link");
-//fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-//let celciusTemperature = null;
-
-//handleSubmit("Amsterdam");
+handleSubmit("Amsterdam");
 
 
