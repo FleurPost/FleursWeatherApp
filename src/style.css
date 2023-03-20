@@ -55,6 +55,10 @@ padding: 50px;
     color:#04196e;
 }
 
+.btn-outline-secondary:hover {
+    background-color:#fa9319;
+}
+
 .degrees-today {
     font-size: 60px;
 }
