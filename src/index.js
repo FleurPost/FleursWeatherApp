@@ -54,7 +54,7 @@ if (index < 6) {
       <img
         src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png"
         alt=""
-        width="50"
+        width="60"
       />
       <div class="weather-forecast-temperatures">
       <span class="weather-forecast-min-temp">${Math.round(forecastDay.temperature.minimum)}°</span>
