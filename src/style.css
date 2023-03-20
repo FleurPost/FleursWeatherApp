@@ -78,7 +78,8 @@ padding: 50px;
 }
 
 .weather-forecast-temperatures {
-font-size: 14px;
+font-size: 12px;
+text-align: center;
 
 }
 
@@ -90,5 +91,10 @@ font-size: 14px;
     width: 75px;
     float: right;
     padding-right: 30px;
+}
+
+.weather-forecast {
+    font-size: 12px;
+text-align: center;
 }
 
