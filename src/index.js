@@ -54,7 +54,7 @@ if (index < 6) {
       <img
         src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png"
         alt=""
-        width="25"
+        width="40"
       />
       <div class="weather-forecast-temperatures">
       <span class="weather-forecast-min-temp">${Math.round(forecastDay.temperature.minimum)}°</span>
@@ -92,16 +92,20 @@ function displayWeatherCondition(response) {
   getForecast(response.data.coordinates);
 }
 
-function handleSubmit(event) {
-  event.preventDefault();
+function search(city) {
   let apiKey = "e4fc849f9b230t53ac4fc6ffacf0bo9b";
-  let city = document.querySelector("#insert-city").value;
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#insert-city");
+  search(city.value);
 
 }
 
-
+search("Amsterdam");
 
 function myPosition(position) {
   let latitude = position.coords.latitude;
@@ -125,7 +129,5 @@ let localButton = document.querySelector("#button");
 localButton.addEventListener("click", getCurrentPosition);
 
 displayForecast();
-
-//handleSubmit("Amsterdam"); -- can not get this to work 
 
 
